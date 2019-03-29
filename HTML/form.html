@@ -34,7 +34,7 @@
             </tr>
             <tr>
                     <td>Mobile No</td>
-                    <td><input type="text" id="mobno" name="mobno" pattern="[0-9]{10}" title="please enter valid mobile no"</td>
+                    <td><input type="text" id="mobno" name="mobno" pattern="[6-9][\d]{9}" title="please enter valid mobile no"</td>
             </tr>
             <tr>
                     <td>Gender</td>
@@ -64,10 +64,10 @@
             <tr>
                 <td>City</td>
                 <td>
-                    <select name="city">
+                    <select name="city" multiple size="2">
                         <option value="MUM">Mumbai</option>
                         <option value="DEL">Delhi</option>
-                        <option value="KOL">Kolkata</option>
+                        <option value="KOL" selected>Kolkata</option>
                         <option value="PAT">Patna</option>
                         <option value="MAS">Masaurhi</option>
                         <option value="PUN">Pune</option>
