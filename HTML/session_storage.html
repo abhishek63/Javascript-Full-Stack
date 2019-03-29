@@ -13,17 +13,49 @@
             emp id <input type="text" id="empid" /><br>
             emp name <input type="text" id="empname" /><br>
             salary <input type="text" id="salary" /><br>
-            <input type="button" value="Save data" />
+            <input type="button" value="Save data" onclick="store();" />
             <input type="button" value="Clear session"/>
-        </center>
+            <hr>
 
         <div id="mydiv">
 
 
-
         </div>
 
+    </center>
+
         <script type="text/javascript">
+
+            var result;
+            function store(){
+                var empId = document.getElementById("empid").value;
+                var empName = document.getElementById("empname").value;
+                var salary = document.getElementById("salary").value;
+
+                if(window.sessionStorage){
+                    sessionStorage.setItem("empId",empId);
+                    sessionStorage.setItem("empName",empName);
+                    sessionStorage.setItem("salary",salary);
+                    displayResult();
+
+                }
+                else{
+                    result = "Session storage not supported";
+                    document.getElementById("mydiv").innerHTML = result;
+                }
+
+            }
+
+            function displayResult(){
+                var empId = sessionStorage.getItem("empId");
+                var empName = sessionStorage.getItem("empName");
+                var salary = sessionStorage.getItem("salary");
+
+                result = "Employee id : "+empId+"<br>Employee Name :"+empName+"<br>Salary : "+salary ; 
+                document.getElementById("mydiv").innerHTML = result;
+
+
+            }
            
         
         </script>
