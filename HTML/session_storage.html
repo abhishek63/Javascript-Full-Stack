@@ -14,7 +14,8 @@
             emp name <input type="text" id="empname" /><br>
             salary <input type="text" id="salary" /><br>
             <input type="button" value="Save data" onclick="store();" />
-            <input type="button" value="Clear session"/>
+            <input type="button" value="Clear session" onclick="sessionStorage.clear();"/>
+            <input type="button" value="Display" onclick="displayResult();" />
             <hr>
 
         <div id="mydiv">
@@ -36,7 +37,6 @@
                     sessionStorage.setItem("empId",empId);
                     sessionStorage.setItem("empName",empName);
                     sessionStorage.setItem("salary",salary);
-                    displayResult();
 
                 }
                 else{
