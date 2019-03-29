@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>
+            some advanced concept in form
+        </title>
+        <style>
+            input{
+                margin: 6px;
+            }
+        </style>
+    </head>
+    <body bgcolor="aliceblue">
+
+        <center>
+        <form>
+           Name <input type="text" placeholder="Enter your name" /><br>
+           Date <input type="date" /><br>
+           email <input type="email" /><br>
+           City<input type="text" list="cities" /><br>
+           <datalist id="cities" >
+                <option>Mumbai</option>
+                <option>Delhi</option>
+                <option>Kolkata</option>
+                <option>Patna</option>
+                <option>Masaurhi</option>
+                <option>Pune</option>
+           </datalist>
+
+           search <input type="search" /><br>
+           range <input type="range" min="2" max="10" /><br>
+
+            <audio controls>
+               <source src="song.mp3" >
+           </audio> <br>
+
+           <video controls width="300" height="180" >
+               <source src="video.mp4" >
+           </video><br>
+        <input type="submit" />
+        </form>
+        </center>
+    </body>
+</html>
