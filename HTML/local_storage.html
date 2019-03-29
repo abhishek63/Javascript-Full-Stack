@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Local Storage </title>
+        <style>
+                input{
+                    margin: 6px;
+                }
+        </style>
+    </head>
+    <body bgcolor="aliceblue">
+        <center>
+            <h1>Understanding the behaviour of session</h1>
+            emp id <input type="text" id="empid" /><br>
+            emp name <input type="text" id="empname" /><br>
+            salary <input type="text" id="salary" /><br>
+            <input type="button" value="Save data" onclick="store();" />
+            <input type="button" value="Clear session" onclick="localStorage.clear();"/>
+            <input type="button" value="Display" onclick="displayResult();" />
+            <hr>
+
+        <div id="mydiv">
+
+
+        </div>
+
+    </center>
+
+        <script type="text/javascript">
+
+            var result;
+            function store(){
+                var empId = document.getElementById("empid").value;
+                var empName = document.getElementById("empname").value;
+                var salary = document.getElementById("salary").value;
+
+                if(window.localStorage){
+                    localStorage.setItem("empId",empId);
+                    localStorage.setItem("empName",empName);
+                    localStorage.setItem("salary",salary);
+
+                }
+                else{
+                    result = "Session storage not supported";
+                    document.getElementById("mydiv").innerHTML = result;
+                }
+
+            }
+
+            function displayResult(){
+                var empId = localStorage.getItem("empId");
+                var empName = localStorage.getItem("empName");
+                var salary = localStorage.getItem("salary");
+
+                result = "Employee id : "+empId+"<br>Employee Name :"+empName+"<br>Salary : "+salary ; 
+                document.getElementById("mydiv").innerHTML = result;
+
+
+            }
+           
+        
+        </script>
+    </body>
+</html>
