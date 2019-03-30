@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>view data</title>
+        <script>
+            
+            function viewdata(){
+                var uname = localStorage.getItem("uname");
+                alert(uname);
+                document.getElementById("display").innerHTML = uname;
+            }
+        
+        </script>
+    </head>
+    <body>
+        <input type="button" value="view data" onclick="viewdata();" />
+
+        <div id="display">
+
+
+        </div>
+    </body>
+</html>

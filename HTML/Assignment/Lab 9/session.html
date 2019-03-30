@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Local Storage</title>
+        <script>
+
+            function store(){
+                var uname = document.getElementById("uname").value;
+                alert(uname);
+
+                if(window.localStorage){
+                    localStorage.setItem("uname",uname);
+                }
+                
+            }
+        
+        </script>
+    </head>
+    <body>
+            <center>
+                    <h1>Understanding the behaviour of local storage</h1>
+                    user name <input type="text" id="uname" /><br>
+                    password <input type="password" id="pass" /><br>
+                    email id <input type="text" id="email" /><br>
+                    address <input type="text" id="add" /><br>
+                    city <input type="text" id="city" /><br>
+
+                    <input type="button" value="Save data" onclick="store();" />
+                    <input type="button" value="Clear session" onclick="localStorage.clear();"/>
+                  
+                    <hr>
+            </center>
+        
+    </body>
+</html>
