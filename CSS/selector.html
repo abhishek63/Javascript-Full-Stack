@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>
+        CSS selector
+    </title>
+    <style>
+        *{
+
+            color: red;
+        }
+
+        .myClass{
+            width: 200px;
+            height: 200px;
+            border: 5px solid blue;
+
+        }
+
+        #myId{
+            width: 200px;
+            height: 200px;
+            border: 5px solid green;
+
+        }
+
+        p[title="news Para"]{
+
+            color: green;
+        }
+
+        p[title~="news"]{
+
+            color: blue;
+        }
+/*
+        p[title|="news"] // The value has to be a whole word, either alone, like class="top", or followed by a hyphen( - ), like class="top-text"! 
+
+        p[title^="news"] // The following example selects all elements with a class attribute value that begins with "news":
+
+        p[title$="news"] //The following example selects all elements with a class attribute value that ends with "news":
+
+        p[title*="ne"] //The following example selects all elements with a class attribute value that contains "ne":
+
+*/
+    
+    </style>
+</head>
+<body>
+    <h1>There are different types of selector</h1>
+
+    <div class="myClass" >
+        I am a div with class name myClass
+    </div>
+
+    <p title="news Para"> 
+            The party of Turkey's President Recep Tayyip Erdogan has lost control of the capital, Ankara, in local elections in what is being seen as a setback to his 16 years in power.
+
+            But both his AKP and the opposition claimed to have won the mayoralty of the largest city, Istanbul.
+            
+            Nationally, the president's AKP-led alliance has won more than 51% of the vote in the municipal elections.
+    </p>
+            
+            
+    <div id="myId">
+        I am a div with id name myId  
+    </div>
+
+    <p title="news article1">
+            "If there are any shortcomings, it is our duty to correct them," he said.
+            
+            Mr Erdogan had previously said the poll was about the "survival" of the country and his party,
+            
+            The election came amid an economic downturn and was widely seen as a referendum on his leadership.
+    </p>
+
+    <a href="https://www.w3schools.com/CSS/css_attribute_selectors.asp" >For more visit w3school</a>
+
+</body>
+
+</html>
