@@ -1,34 +1,39 @@
+<!DOCTYPE html>
 <html>
 <head>
-<style>
+        <script>
+                function animatee(){
+                    document.getElementById("div1").className = "animateit" ;
+                }
+            </script>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+ 
+}
+.animateit{
+    animation-name: example;
+    animation-duration: 4s;
+}
 
-    @keyframes myAnimation{
-        0%{ background-color: rgb(201, 57, 57)}
-        25%{ background-color: rgb(52, 175, 52)}
-        50%{ background-color: rgb(218, 245, 175)}
-        100%{ background-color: rgb(194, 169, 146)}
-    }
 
-    div{
-        height: 200px;
-        width: 400px;
-        border: 2px solid black;
-        background-color: blue;
-
-
-
-    }
-
-    div:hover{
-        animation: myAnimation 5s;
-    }
-
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
 </style>
+
 </head>
 <body>
-        <div>
 
-        </div>
+<input type="button" value="animate" onclick="animatee()"/>
+<div id="div1"></div>
 
 </body>
 </html>
