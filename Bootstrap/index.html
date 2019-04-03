@@ -13,6 +13,9 @@
     .page-header{
         color:red;
     }
+    .breadcrumb-item+.breadcrumb-item::before{
+        content:'|';
+    }
     
     </style>
     <title>Hello, world!</title>
@@ -45,6 +48,43 @@
                     <a href="#">About</a>
             </li>
         </ol>
+
+        <br>
+        <div class="row">
+            <div class="col-2">
+
+            </div>
+            <div class="col-8 text-center">
+                    <div class="btn-group">
+                            <button class="btn btn-info">Button 1</button>
+                            <button class="btn btn-primary">Button 1</button>
+                            <button class="btn btn-danger">Button 1</button>
+                            <button class="btn btn-success">Button 1</button>
+                            <button class="btn btn-warning">Button 1</button>
+                            <button class="btn btn-info">Button 1</button>
+                
+                    </div>
+
+            </div>
+            <div class="col-2">
+
+                <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown button</button>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">India</a>
+                        <a href="#" class="dropdown-item">Africa</a>
+                        <a href="#" class="dropdown-item">Delihi</a>
+                        <a href="#" class="dropdown-item">CSK</a>
+                        <a href="#" class="dropdown-item">Pakistan</a>
+                        <a href="#" class="dropdown-item">Nepal</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+       
+
 
     </div>
 
