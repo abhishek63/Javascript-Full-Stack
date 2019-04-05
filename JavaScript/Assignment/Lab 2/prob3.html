@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Compound Interest</title>
+</head>
+<body>
+<script>
+function comp(){
+
+    var p=1000;
+    var r = 10;
+    var t = 1;
+
+   var  A = (p* Math.pow((1 + (r/100)), t));
+   A -= p;
+   return A;
+
+}
+
+</script>
+
+<h1> Compound Interest :</h1>
+
+<p>Principal : 1000 <br> Rate of interest : 10% <br> Period : 1 year  <br>Comp Interest : 
+
+<script>
+document.write(comp());
+
+</script>
+
+</p>
+</body>
+</html>
