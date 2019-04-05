@@ -1,0 +1,67 @@
+<html>
+<head>
+<title> window example </title>
+<style>
+        table{
+                text-align: center;
+        }
+        td{
+                font-weight: bold;
+        }
+</style>
+</head>
+<script>
+function window1()
+{
+/*TODO: get the height, width, left and top from the form object and pass the values to open method of window along with the name of the html file to be opened in the new window.*/
+
+        var height = document.getElementById("height").value;
+        var width = document.getElementById("width").value;
+        var left = document.getElementById("left").value;
+        var top = document.getElementById("top").value;
+
+        var abc = "width="+width+",height="+height ;
+
+
+        var myWindow = window.open("", "MsgWindow", abc);
+                myWindow.moveTo(left,top);
+        
+  myWindow.document.write("<p>This windows is open by clicking new window button</p>");
+
+        
+
+}
+</script>
+<body>
+<form id="frmlab">
+<table border="1" cellspacing="8" cellpadding="10" bordercolor="blue">
+
+        <tr>
+            <td colspan="4"><h2>Create a new window</h2></td>
+        </tr>
+        <tr>
+            <td colspan="4">Window Size</td>
+        </tr>
+        <tr>
+            <td>Width :</td>
+            <td><input type="text" id="width" ></td>
+            <td>Height :</td>
+            <td><input type="text" id="height"></td>
+        </tr>
+        <tr>
+                <td colspan="4">POSITION</td>
+        </tr>
+        <tr>
+                <td>Left :</td>
+                <td><input type="text" id="left" ></td>
+                <td>Top :</td>
+                <td><input type="text" id="top"></td>
+        </tr>
+        <tr>
+                <td colspan="3"><input type="button" onclick="window1()" value="New Window" ></td>
+                <td> <input type="button" value="Reset" ></td>
+        </tr>
+</table>
+    </form>
+    </body>
+    </html>
