@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+        function calculatePayment(){
+
+            var principal = document.getElementById("amount").value;
+            var rate = document.getElementById("rate").value;
+            var time = document.getElementById("time").value;
+
+            var givenTotalAmount = (principal* Math.pow((1 + (rate/100)), time));
+
+            var compoundInterest = givenTotalAmount - principal;
+
+            var monthlyPremium = givenTotalAmount / (time * 12) ;
+
+
+
+            document.getElementById("emi").setAttribute("value",monthlyPremium);
+            document.getElementById("amountTotal").setAttribute("value",givenTotalAmount);
+            document.getElementById("ci").setAttribute("value",compoundInterest);
+            
+        }
+    
+    </script>
+</head>
+<body>
+    <h1>Enter Loan Information:</h1>
+    <table>
+        <tr>
+            <td>1)Amount of the loan</td>
+            <td><input type="text" id="amount"></td>
+        </tr>
+        <tr>
+            <td>2)Annual percentage rate of interest</td>
+            <td><input type="text" id="rate"></td>
+        </tr>
+        <tr>
+            <td>3)Repayment period in years</td>
+            <td><input type="text" id="time"></td>
+        </tr>
+
+    </table>
+    <button onclick="calculatePayment()">Compute</button>
+    <h1>Payment Information:</h1>
+    <table>
+            <tr>
+                <td>4)Your monthly payment will be</td>
+                <td><input type="text" id="emi" disabled></td>
+            </tr>
+            <tr>
+                <td>5)Your total payment will be</td>
+                <td><input type="text" id="amountTotal" disabled></td>
+            </tr>
+            <tr>
+                <td>6)Your total interest payments will be</td>
+                <td><input type="text" id="ci" disabled></td>
+            </tr>
+    
+        </table>
+</body>
+</html>
