@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+        <script>
+             
+            function process(){
+
+                var str = document.getElementById("str").value ;
+
+                var re = /\d+/g;
+
+                var r = str.match(re);
+
+              //  alert(typeof(r));
+                var div = document.getElementById("result");
+                for(var i = 0 ; i<r.length ; i++){
+                        div.innerHTML += r[i]+"<br>";
+
+                }
+
+            
+
+            }
+            
+        </script>
+
+        <input type="text" id="str" /> <br>
+        <button onclick="process()">Process String</button> <br>
+
+        <div id="result">
+
+            
+        </div>
+    
+</body>
+</html>
